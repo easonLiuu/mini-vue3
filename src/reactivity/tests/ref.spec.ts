@@ -67,8 +67,8 @@ describe("ref", () => {
     expect(proxyUser.age).toBe(20);
     expect(user.age.value).toBe(20);
 
-    // proxyUser.age = ref(10);
-    // expect(proxyUser.age).toBe(10);
-    // expect(user.age.value).toBe(10);
+    proxyUser.age = ref(10);
+    expect(proxyUser.age).toBe(10);
+    expect(user.age.value).toBe(10);
   });
 });
